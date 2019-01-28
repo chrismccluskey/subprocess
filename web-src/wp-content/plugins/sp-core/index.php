@@ -1,0 +1,1 @@
+<?php // This file intentionally left blank to disable public access to directory internals
