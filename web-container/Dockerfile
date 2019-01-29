@@ -2,6 +2,14 @@ FROM alpine:latest
 
 RUN apk --update add \
     nginx \
+	php7-cli \
+	php7-dom \
+	php7-xml \
+	php7-xmlwriter \
+	php7-tokenizer \
+	php7-iconv \
+	php7-phar \
+	php7-mbstring \
     php7-fpm \
 	php7-json \
 	php7-openssl \
@@ -28,6 +36,9 @@ RUN mkdir -p /var/log/supervisor
 RUN rm /etc/nginx/nginx.conf
 
 COPY default /etc/nginx/sites-enabled/default
+COPY init.sh /tmp/init.sh
+
+RUN chmod +x /tmp/init.sh && /tmp/init.sh
 
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD nginx-supervisor.ini /etc/supervisor.d/nginx.ini
