@@ -26,4 +26,4 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-core.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-tracer.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/api.php';
 
-sp_register_service('\SP\Tracer');
+sp_register_service( '\SP\Tracer' );
