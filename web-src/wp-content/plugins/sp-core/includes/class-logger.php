@@ -4,11 +4,11 @@ namespace SP;
 
 abstract class Logger {
 
-	public const DEBUG = 100;
-	public const INFO = 200;
+	public const DEBUG   = 100;
+	public const INFO    = 200;
 	public const WARNING = 300;
-	public const ERROR = 400;
-	public const FATAL = 500;
+	public const ERROR   = 400;
+	public const FATAL   = 500;
 
 	private $log_level_names = [
 		self::DEBUG   => 'debug',
@@ -24,7 +24,7 @@ abstract class Logger {
 	public function __construct(Configuration $config) {
 
 		$this->config = $config;
-		$this->log_level = $this->config->get('log.level', 0);
+		$this->log_level = sp_get_config('log.level', $this->config);
 
 	}
 
@@ -78,33 +78,5 @@ abstract class Logger {
 	}
 
 	abstract public function write($contents);
-
-}
-
-class FileLogger extends Logger {
-
-	protected $config;
-	protected $file_pointer;
-
-	public function __construct(Configuration $config) {
-
-		parent::__construct($config);
-
-		$filename = join([$this->config->get('log.directory'), $this->config->get('log.filename')]);
-		$this->file_pointer = fopen($filename, $this->config->get('log.filemode'));
-
-	}
-
-	public function __destruct() {
-
-		fclose($this->file_pointer);
-		
-	}
-
-	public function write($contents) {
-
-		fwrite($this->file_pointer, $contents);
-
-	}
 
 }

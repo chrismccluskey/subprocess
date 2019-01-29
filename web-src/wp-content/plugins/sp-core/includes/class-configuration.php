@@ -27,6 +27,9 @@ class DefaultConfiguration extends Configuration {
 			'log.filemode'   => 'a',
 			'log.level'      => \SP\Logger::DEBUG,
 			'tracer.enabled' => true,
+			'tracer.directory'  => '/var/log/sp/',
+			'tracer.filename'   => 'default-trace.log',
+			'tracer.filemode'   => 'a',
 		];
 	}
 

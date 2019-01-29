@@ -4,7 +4,7 @@ namespace SP {
 
 	class ServiceRegistry extends Service {
 
-		protected $name = 'service_registry';
+		protected $name = 'service registry';
 		protected $map = [];
 
 		public function register($service_name) {
