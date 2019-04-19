@@ -987,6 +987,9 @@ object {
 /*--------------------------------------------------------------
 ## Custom
 --------------------------------------------------------------*/
+html, body {
+	height: 100%;
+}
 
 body {
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/use_your_illusion.png');
@@ -1000,6 +1003,10 @@ body {
 #page {
 	width: 1024px;
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/skulls.png');
+
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 #masthead {
@@ -1041,9 +1048,27 @@ body {
 
 #content {
 	margin: 0 25px 0 25px;
+	flex: 1 0 auto;
 }
 
 article {
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/seamless_paper_texture.png');
 	padding: 0 10px 10px 10px;
+}
+
+#colophon {
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/congruent_outline.png');
+	height: 200px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	font-size: 0.8em;
+	color: white;
+	flex-shrink: 0;
+}
+
+#colophon a {
+	color: #88aa00;
+	text-decoration: none;
 }
