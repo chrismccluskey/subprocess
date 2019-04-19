@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Do+Hyeon|BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Creepster|Do+Hyeon|Ewert|Fruktur|Gravitas+One|Monoton|Rubik:900" rel="stylesheet"><!-- //TODO: bundle these with webpack? -->
 	<?php wp_head(); ?>
 </head>
 
@@ -26,22 +26,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$subprocess_description = get_bloginfo( 'description', 'display' );
-			if ( $subprocess_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $subprocess_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			<img src="<?php echo get_stylesheet_directory_uri() . "/assets/logo-color.svg"; ?>" class="logo" />
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

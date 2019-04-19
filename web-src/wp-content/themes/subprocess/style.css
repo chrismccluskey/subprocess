@@ -983,3 +983,67 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## Custom
+--------------------------------------------------------------*/
+
+body {
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/use_your_illusion.png');
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+#page {
+	width: 1024px;
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/skulls.png');
+}
+
+#masthead {
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/dark-honeycomb.png');
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+#masthead .logo {
+	width: 100px;
+}
+
+#site-navigation {
+	background-color: black;
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/zwartevilt.png');
+}
+
+#primary-menu a {
+	color: #88aa00;
+	font-size: 1.5em;
+}
+
+#primary-menu > ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+	font-family: 'Bungee', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+#primary-menu > ul > li {
+	width: 300px;
+	text-align: center;
+}
+
+#content {
+	margin: 0 25px 0 25px;
+}
+
+article {
+	background-image: url('/wp-content/themes/subprocess/assets/third-party/seamless_paper_texture.png');
+	padding: 0 10px 10px 10px;
+}

@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'subprocess_widgets_init' );
  * Enqueue scripts and styles.
  */
 function subprocess_scripts() {
-	wp_enqueue_style( 'subprocess-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'subprocess-style', get_stylesheet_uri(), [], time() );
 
 	wp_enqueue_script( 'subprocess-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
