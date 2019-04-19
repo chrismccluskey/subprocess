@@ -1,0 +1,17 @@
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	backupStaticAttributes="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	stopOnFailure="false"
+	verbose="true">
+
+	<testsuites>
+		<testsuite name="sp-core">
+			<directory prefix="test-" suffix=".php">wp-content/mu-plugins/sp-core/tests</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

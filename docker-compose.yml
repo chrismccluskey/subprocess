@@ -2,16 +2,18 @@ version: '3'
 services:
   web:
     build: ./web-container
-    container_name: subprocess-web
+    container_name: sp-web
     ports:
       - '80:80'
     volumes:
       - ./web-src:/www
+      - ./data/wp-uploads:/www/wp-content/uploads
+      #- ./log:/var/log
     links:
       - db
   db:
     image: mysql
-    container_name: subprocess-db
+    container_name: sp-db
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - ./data/mysql:/var/lib/mysql
@@ -22,3 +24,10 @@ services:
       MYSQL_USER: wpuser
       MYSQL_PASSWORD: secret
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  dev:
+    build: ./dev-container
+    container_name: sp-dev
+    volumes:
+      - ./web-src:/www
+    links:
+      - db

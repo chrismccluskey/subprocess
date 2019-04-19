@@ -25,14 +25,13 @@ RUN sed -i 's/nobody/www/' /etc/php7/php-fpm.d/www.conf
 RUN sed -i 's/display_errors = Off/display_errors = On/' /etc/php7/php.ini
 
 RUN adduser -D -g 'www' www && \
-    mkdir /www && \
-    chown -R www:www /www && \
-    chown -R www:www /var/log/sp
+    mkdir -p /www /var/tmp/nginx/client_body && \
+    chown -R www:www /var/tmp/nginx/client_body /www /var/log
 
-RUN mkdir -p /etc/nginx
-RUN mkdir -p /var/run/php-fpm
-RUN mkdir -p /run/nginx
-RUN mkdir -p /var/log/supervisor
+VOLUME ["/www/wp-content/uploads"]
+RUN chmod 666 /www/wp-content/uploads
+
+RUN mkdir -p /etc/nginx /var/run/php-fpm /run/nginx /var/log/supervisor /var/log/nginx
 RUN rm /etc/nginx/nginx.conf
 
 COPY default /etc/nginx/sites-enabled/default
