@@ -34,13 +34,14 @@ RUN chmod 666 /www/wp-content/uploads
 RUN mkdir -p /etc/nginx /var/run/php-fpm /run/nginx /var/log/supervisor /var/log/nginx
 RUN rm /etc/nginx/nginx.conf
 
-COPY default /etc/nginx/sites-enabled/default
-COPY init.sh /tmp/init.sh
+COPY etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+COPY etc/nginx/global /etc/nginx/global
+COPY tmp/init.sh /tmp/init.sh
 
 RUN chmod +x /tmp/init.sh && /tmp/init.sh
 
-ADD nginx.conf /etc/nginx/nginx.conf
-ADD nginx-supervisor.ini /etc/supervisor.d/nginx.ini
+ADD etc/nginx/nginx.conf /etc/nginx/nginx.conf
+ADD etc/supervisor.d/nginx-supervisor.ini /etc/supervisor.d/nginx.ini
 
 EXPOSE 80
 
