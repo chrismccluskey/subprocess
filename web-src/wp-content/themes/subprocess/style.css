@@ -993,10 +993,12 @@ html, body {
 
 body {
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/use_your_illusion.png');
+
 	display: flex;
 	flex-flow: row wrap;
-	align-content: center;
+	align-content: flex-start;
 	justify-content: center;
+
 	font-family: 'Fjalla One', sans-serif;
 }
 
@@ -1010,7 +1012,7 @@ h1 {
 	width: 1024px;
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/skulls.png');
 
-	height: 100%;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
