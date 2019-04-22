@@ -26,7 +26,7 @@ RUN sed -i 's/display_errors = Off/display_errors = On/' /etc/php7/php.ini
 
 RUN adduser -D -g 'www' www && \
     mkdir -p /www /var/tmp/nginx/client_body && \
-    chown -R www:www /var/tmp/nginx/client_body /www /var/log
+    chown -R www:www /var/tmp/nginx /www /var/log
 
 VOLUME ["/www/wp-content/uploads"]
 RUN chmod 666 /www/wp-content/uploads
