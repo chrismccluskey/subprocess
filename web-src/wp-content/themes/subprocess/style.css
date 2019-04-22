@@ -1039,7 +1039,7 @@ h1 {
 	font-size: 1.5em;
 }
 
-#primary-menu > ul {
+#primary-menu {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -1049,7 +1049,7 @@ h1 {
 	text-transform: uppercase;
 }
 
-#primary-menu > ul > li {
+#primary-menu > li {
 	width: 300px;
 	text-align: center;
 }
