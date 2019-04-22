@@ -1010,7 +1010,7 @@ h1 {
 	width: 1024px;
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/skulls.png');
 
-	min-height: 100vh;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 }
