@@ -11,6 +11,7 @@ services:
       #- ./log:/var/log
     links:
       - db
+    restart: always
   db:
     image: mysql
     container_name: sp-db
@@ -24,6 +25,7 @@ services:
       MYSQL_USER: wpuser
       MYSQL_PASSWORD: secret
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    restart: always
   dev:
     build: ./dev-container
     container_name: sp-dev
