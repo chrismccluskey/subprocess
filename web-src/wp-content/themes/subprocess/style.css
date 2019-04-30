@@ -993,6 +993,7 @@ html, body {
 
 body {
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/congruent_outline.png');
+	background-attachment: fixed;
 
 	display: flex;
 	flex-flow: row wrap;
@@ -1011,6 +1012,7 @@ h1 {
 #page {
 	width: 1024px;
 	background-image: url('/wp-content/themes/subprocess/assets/third-party/skulls.png');
+	background-attachment: fixed;
 
 	min-height: 100vh;
 	display: flex;
