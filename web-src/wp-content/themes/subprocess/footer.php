@@ -32,5 +32,6 @@
 
 <?php wp_footer(); ?>
 
+<script src="/wp-content/themes/subprocess/js/logo.js"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Do+Hyeon|BioRhyme|Black+Ops+One|Bungee|Bungee+Shade|Creepster|Do+Hyeon|Ewert|Fruktur|Gravitas+One|Monoton|Rubik:900" rel="stylesheet"><!-- //TODO: bundle these with webpack? -->
+	<script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -26,7 +27,8 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<img src="<?php echo get_stylesheet_directory_uri() . "/assets/logo-color.svg"; ?>" class="logo" />
+			<!-- img src="<?php echo get_stylesheet_directory_uri() . "/assets/logo-color.svg"; ?>" class="logo" / -->
+			<canvas class="zdog-canvas" width="400" height="260" class="logo"></canvas>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
